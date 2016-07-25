@@ -21,5 +21,12 @@ _, ax = plt.subplots(1)
 sb.countplot(x = 'Sex', data = data, ax = ax)
 
 sb.jointplot(x = 'Length', y = 'Diameter', data = data)
+sb.jointplot(x = 'Length', y = 'Rings', data = data, kind = 'hex', color = 'k')
+
+plt.show()
+
+_, ax = plt.subplots(1)
+cmap = sb.cubehelix_palette(as_cmap=True, dark=0, light=1, reverse=True)
+sb.kdeplot(data['Diameter'], data['Rings'], cmap=cmap, n_levels=60, shade=True)
 
 plt.show()
