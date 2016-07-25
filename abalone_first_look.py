@@ -1,10 +1,9 @@
 import pandas as pd
 import seaborn as sb
 import matplotlib.pyplot as plt
+from readdata import *
 
-data = pd.read_csv('abalone.data', header=None)
-data.columns = ['Sex', 'Length', 'Diameter', 'Height', 'Whole Height',
-                'Shucked Weight', 'Viscera Weight', 'Shell Weight', 'Rings']
+data = abalone()
 
 _, ax = plt.subplots(4, 2)
 sb.distplot(data['Length'], axlabel = 'Length', ax = ax[0][0])
