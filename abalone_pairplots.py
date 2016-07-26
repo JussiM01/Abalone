@@ -18,13 +18,13 @@ plt.show()
 
 ####################
 
-data3 = data[['Length', 'Diameter', 'Height', 'Rings']]
+data3 = data[['Length', 'Diameter', 'Height', 'Whole Weight']]
 
 sb.pairplot(data3)
 
 plt.show()
 
-data4 = data[['Length', 'Diameter', 'Height', 'Rings', 'Sex']]
+data4 = data[['Length', 'Diameter', 'Height', 'Whole Weight', 'Sex']]
 
 sb.pairplot(data4, hue='Sex')
 
