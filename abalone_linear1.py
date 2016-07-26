@@ -13,4 +13,6 @@ data_conv = data[['Length', 'Diameter', 'Height', 'Whole Weight',
 
 sb.regplot(x='Length', y='Diameter', data=data_conv)
 
+sb.lmplot(x='Rings', y='Length', data=data_conv, x_estimator=np.mean)
+
 plt.show()

@@ -13,4 +13,8 @@ data_conv = data[['Length', 'Diameter', 'Height', 'Whole Weight',
 
 sb.lmplot(x='Length', y='Whole Weight', data=data_conv, order=3)
 
+sb.lmplot(x='Length', y='Whole Weight', data=data_conv, order=3, ci=None)
+
+sb.lmplot(x='Length', y='Whole Weight', data=data_conv, order=3, scatter_kws={"s": 80})
+
 plt.show()
