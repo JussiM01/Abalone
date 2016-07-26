@@ -9,7 +9,7 @@ sb.set(color_codes=True)
 
 data = abalone()
 
-sb.pairplot(data, x_vars=['Length', 'Whole Weight', 'Diameter'], y_vars=['Rings'],
-    size=5, hue='Sex', kind='reg')
+sb.pairplot(data, x_vars=['Whole Weight', 'Shucked Weight', 'Viscera Weight',
+    'Shell Weight'], y_vars=['Rings'], size=5, hue='Sex', kind='reg')
 
 plt.show()
