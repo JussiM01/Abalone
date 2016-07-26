@@ -15,4 +15,8 @@ sb.regplot(x='Length', y='Diameter', data=data_conv)
 
 sb.lmplot(x='Rings', y='Length', data=data_conv, x_estimator=np.mean)
 
+sb.lmplot(x='Rings', y='Shell Weight', data=data_conv, x_estimator=np.mean)
+
+sb.lmplot(x='Rings', y='Whole Weight', data=data_conv, x_estimator=np.mean)
+
 plt.show()
