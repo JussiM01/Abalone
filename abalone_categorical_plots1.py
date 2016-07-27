@@ -23,3 +23,11 @@ plt.show()
 sb.swarmplot(x='Rings', y='Diameter', data=data, size=1)
 
 plt.show()
+
+sb.stripplot(x='Rings', y='Diameter', data=data, jitter=True, size=2, hue='Sex')
+
+plt.show()
+
+sb.swarmplot(x='Rings', y='Diameter', data=data, size=2, hue='Sex')
+
+plt.show()
