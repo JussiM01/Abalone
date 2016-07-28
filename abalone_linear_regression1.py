@@ -1,6 +1,8 @@
 from sklearn import linear_model
 from readdata import *
 from sklearn.metrics import mean_squared_error
+import seaborn as sb
+import matplotlib.pyplot as plt
 
 X_vars = ['Length', 'Whole Weight']
 
@@ -16,3 +18,10 @@ print(model.coef_)
 y_pred = model.predict(X_test)
 
 print('mean squared error of prediction:', mean_squared_error(y_test, y_pred))
+
+comparison = y_test.copy()
+comparison['Prediction'] = y_pred
+
+sb.jointplot(x = 'Rings', y = 'Prediction', xlim=(0,25), ylim=(0,25), data=comparison)
+
+plt.show()
