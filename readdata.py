@@ -5,6 +5,8 @@ def abalone():
     data = pd.read_csv('abalone.data', header=None)
     data.columns = ['Sex', 'Length', 'Diameter', 'Height', 'Whole Weight',
                     'Shucked Weight', 'Viscera Weight', 'Shell Weight', 'Rings']
+    data['Infant'] = 0
+    data['Infant'][data['Sex'] == 'I'] = 1
     return data
 
 def abalone_train_test(X_vars, y_vars):
