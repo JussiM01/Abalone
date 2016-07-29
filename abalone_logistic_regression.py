@@ -21,3 +21,4 @@ print('accuracy score of prediction:', accuracy_score(y_test, y_pred))
 
 confusion_matrix(y_test, y_pred)
 roc_curve(y_test, y_pred_proba)
+decision_boundary(model, X_test, y_test)
