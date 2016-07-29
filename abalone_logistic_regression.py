@@ -15,7 +15,9 @@ model.fit(X_train, y_train)
 print(model.coef_)
 
 y_pred = model.predict(X_test)
+y_pred_proba = model.predict_proba(X_test)
 
 print('accuracy score of prediction:', accuracy_score(y_test, y_pred))
 
 confusion_matrix(y_test, y_pred)
+roc_curve(y_test, y_pred_proba)
