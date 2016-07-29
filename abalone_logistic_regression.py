@@ -1,6 +1,7 @@
 from sklearn import linear_model
 from readdata import *
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 import seaborn as sb
 import matplotlib.pyplot as plt
 
@@ -18,3 +19,5 @@ print(model.coef_)
 y_pred = model.predict(X_test)
 
 print('accuracy score of prediction:', accuracy_score(y_test, y_pred))
+
+print('confusion matrix: \n', confusion_matrix(y_test, y_pred))
