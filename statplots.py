@@ -18,9 +18,11 @@ def confusion_matrix(y_test, y_pred):
 def roc_curve(y_test, y_pred_proba):
     print('Area under curve:')
     print(metrics.roc_auc_score(y_test, y_pred_proba[:,1]))
-    fpr, tpr, _ = metrics.roc_curve(y_test, y_pred_proba[:,1])
+    fpr, tpr, thresh = metrics.roc_curve(y_test, y_pred_proba[:,1])
+    ind = [i for i in range(len(thresh)) if thresh[i] <= 0.5][0]
     plt.figure()
     plt.plot(fpr, tpr)
+    plt.scatter(fpr[ind], tpr[ind], c='r')
     plt.show()
 
 def decision_boundary(model, X_test, y_test, grid_size=200):
