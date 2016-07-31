@@ -13,7 +13,7 @@ param_grid = {'max_depth': list(range(2, 20))}
 
 
 model = ensemble.RandomForestClassifier(n_estimators=100,
-    min_samples_split=200)
+    min_samples_split=200, random_state=1)
 grid = grid_search.GridSearchCV(model, param_grid, cv=10, scoring='accuracy')
 grid.fit(X_train, y_train)
 
